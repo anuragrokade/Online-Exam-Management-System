@@ -1,0 +1,63 @@
+<div class="container">
+
+    <h2>Question Management</h2>
+
+    <h3>Total Questions: {{ questions.length }}</h3>
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Question</th>
+
+                <th>Correct Answer</th>
+
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor="let question of questions">    <!--Take every question inside questions[] and create one table row(<tr>).-->
+
+                <td>
+
+                    {{ question.id }}
+
+                </td>
+
+                <td>
+
+                    {{ question.questionText }}
+
+                </td>
+
+                <td>
+
+                    {{ question.correctAnswer }}
+
+                </td>
+
+                <td>
+
+                    <button
+                        (click)="deleteQuestion(question.id)">
+
+                        Delete
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>

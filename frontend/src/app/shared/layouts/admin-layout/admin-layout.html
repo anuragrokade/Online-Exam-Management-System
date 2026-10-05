@@ -1,0 +1,56 @@
+<div class="layout">
+
+    <div class="sidebar">
+
+        <h2>Exam Portal</h2>
+
+        <a routerLink="/admin/dashboard">
+            Dashboard
+        </a>
+
+        <a routerLink="/admin/questions">
+            Questions
+        </a>
+
+        <a routerLink="/admin/exams">
+            Exams
+        </a>
+
+        <a routerLink="/admin/statistics">
+            Statistics
+        </a>
+
+        <a routerLink="/admin/leaderboard">
+            Leaderboard
+        </a>
+
+        <button
+            class="logout-btn"
+            (click)="logout()">
+
+            Logout
+
+        </button>
+
+    </div>
+
+    <div class="content">
+
+        <div class="topbar">
+
+            <h1>
+                Online Exam Management System
+            </h1>
+
+        </div>
+
+        <div class="page-content">
+
+            <router-outlet></router-outlet>
+
+        </div>
+
+    </div>
+
+</div>
+`
